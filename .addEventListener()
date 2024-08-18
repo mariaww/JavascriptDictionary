@@ -18,3 +18,46 @@ eventTarget.addEventListener('click', function() {
 function eventHandlerFunction() {
   // this block of code will run when click event happens
 }
+
+
+/* .onevent property  */ 
+//eventTarget.onclick = eventHandlerFunction; vs eventTarget.addEventListener('click', eventHandlerFunction);
+
+
+let view = document.getElementById('view-button');
+let close = document.getElementById('close-button');
+let codey = document.getElementById('codey');
+
+//  the open() function makes the codey and close elements visible by changing their .display properties to 'block'. 
+let open = function() {
+  codey.style.display = 'block';
+  close.style.display = 'block';
+};
+
+//  The hide() function hides the same elements by assigning a 'none' value to the .display properties
+let hide = function() {
+  codey.style.display = 'none';
+  close.style.display = 'none';
+};
+
+view.addEventListener('click', open);
+close.addEventListener('click', hide);
+
+
+// The selected code, view.innerHTML, is used to change the text inside the view button. When textChange is called, the button’s text changes to ‘Hello, World!’. This modifies what the user sees on the button from ‘View’ to ‘Hello, World!’.
+// The 'innerHTML' property is used to set the HTML content inside an element. In this case, it changes the text inside the view button
+
+function textChange(){
+  view.innerHTML = 'Hello, World!'
+}
+// textReturn() function that changes the text of view element/button back to 'View'
+
+function textReturn(){
+  view.innerHTML = 'View'
+}
+
+// click on view button text changes to 'hello world'
+// click for close button text changes back to 'View'
+
+view.onclick = textChange; or view.addEventListener('click', textChange);
+close.onclick = textReturn;
