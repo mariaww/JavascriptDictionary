@@ -1,5 +1,6 @@
 /* Using the .addEventListener() method, we can have a DOM element listen for a specific event and execute a block of code when the event is detected. 
-The DOM element that listens for an event is called the event target and the block of code that runs when the event happens is called the event handler. */
+The DOM element that listens for an event is called the event target and the block of code that runs when the event happens is called the event handler. 
+ */
 
 // 1)We selected our event target from the DOM using 'document.getElementById('targetElement').'
 // 2)We used the '.addEventListener()' method on the 'eventTarget' DOM element.
@@ -20,7 +21,9 @@ function eventHandlerFunction() {
 }
 
 
-/* .onevent property  */ 
+
+/* .onevent property  
+With .onevent, it allows for one event handler function to be attached to the event target(view). However, with the .addEventListener() method , we can add multiple event handler functions(view,close,img).*/ 
 //eventTarget.onclick = eventHandlerFunction; vs eventTarget.addEventListener('click', eventHandlerFunction);
 
 
